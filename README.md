@@ -1,2 +1,2 @@
-# Udemy_Python
+# Python
 Learning Python is Fun and Interesting
