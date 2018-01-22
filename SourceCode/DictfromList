@@ -1,0 +1,17 @@
+filepath = '/home/bigdata/PycharmProjects/LDA/PyLDA/pubmed_bioontology/data/unique.txt'
+
+
+# convert the data into list
+def read_words(words_file):
+    with open(words_file, 'r') as f:
+        return list(itertools.chain.from_iterable(line.split("\n") for line in f))
+
+
+mylist = read_words(filepath)
+mylist1 = filter(None, mylist)
+
+# counting the number of lines in the file
+num_lines = sum(1 for line in open(filepath))
+
+# creating the dictionary from list
+mydictionary = {key: value for (key, value) in zip(range(num_lines), mylist1)}
